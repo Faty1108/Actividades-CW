@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Statics/tareas.css">
+    <title>Organización de tareas</title>
+</head>
+<body>
+        <h2>Lista de tareas</h2>
+        <button class="botones" id="boton1">Tarea CW</button>
+        <button class="botones" id="boton3">Tarea de Bio</button>
+        <button class="botones" id="boton4">Snoopy</button>
+        <button class="botones" id="boton2">Eliminar tarea</button>
+    <section id="contenedor"></section>
+    
+</body>
+<script>
+        //Elementos para botones
+        let boton1 = document.getElementById("boton1");
+        let boton2 = document.getElementById("boton2");
+        let boton3 = document.getElementById("boton3");
+        let boton4 = document.getElementById("boton4");
+        let contenedor = document.getElementById("contenedor");
+
+        //Item de contenedor
+        boton1.addEventListener("click", ()=>{
+            let elemento = document.createElement("div");
+            elemento.textContent="Tarea CW";
+            elemento.classList.add("recuadroGen");
+            elemento.id="elemento";
+            contenedor.appendChild(elemento);
+        });
+        //Función de Tarea Bio
+        boton3.addEventListener("click", ()=>{
+            let elemento = document.createElement("div");
+            elemento.textContent="Tarea de Bio";
+            elemento.classList.add("recuadroGen");
+            elemento.id="obscuro";
+            contenedor.appendChild(elemento);
+        });
+        //Función de agregar Snoopy
+        boton4.addEventListener("click", ()=>{
+            let elemento = document.createElement("div");
+            let imagen = document.createElement("img");
+            imagen.src="../Statics/Snoopy.jpg"
+            imagen.classList.add("imagen");
+            elemento.classList.add("recuadroGen");
+            elemento.id="snoopy";
+            elemento.appendChild(imagen);
+            contenedor.appendChild(elemento);
+        });
+        //Boton remover
+        boton2.addEventListener("click", ()=>{
+            let elemento = document.querySelector("contenedor");
+            let elemento2 = contenedor.lastChild
+            contenedor.removeChild(elemento2);
+        });
+</script>
+</html>
