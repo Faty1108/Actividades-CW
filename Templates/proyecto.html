@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonoroJDF</title>
+    <style>
+      body{
+        background-image: url("../Statics/imagenes/fondo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+   
+</head>
+<body>
+    
+    <!--Barra de busqueda-->
+    <aside id="barraOpciones">
+            <h4 class="titulo">Explore</h4>
+            <hr>
+            <div id="home">
+                <image class="iconoOpcion"></image>
+                <button class="selector" id="homebtn">Home</button>
+            </div>
+            <div id="bibliotecas">
+                <image class="iconoOpcion"></image>
+                <button class="selector" id="bibliotecasbtn">Bibliotecas</button>
+
+                <div id="despegadoBiblio" >
+                    <div id="artDest">
+                        <image class="iconoOpcion"></image>
+                        <button class="selector" id="artDestbtn">Artistas Destacados</button>
+                    </div>
+                    <div id="generos">
+                        <image class="iconoOpcion"></image>
+                        <button class="selector" id="generosbtn">Géneros</button>
+                    </div>
+                    <div id="albums">
+                        <image class="iconoOpcion"></image>
+                        <button class="selector" id="generosbtn">Géneros</button>
+                    </div>
+                </div>    
+
+            </div>
+            <div id="listas">
+                <image class="iconoOpcion"></image>
+                <button class="selector" id="listasbtn">Listas</button>
+            </div>
+            <div id="reciente">
+                <image class="iconoOpcion"></image>
+                <button class="selector" id="recientebtn">Reciente</button>
+            </div>
+            <div id="tu">
+                <image class="iconoOpcion"></image>
+                <button class="selector" id="tubtn">Tú</button>
+            </div>
+
+        </aside>
+
+    <!--barra de navegacion-->
+    <nav>
+        <h1>SonoroJDF</h1>
+        <form>
+            <input type="text" id="barraBusqueda" placeholder="¿Estás aburrido? :(">
+        </form>
+        <button id="btnUsuario" img="../Statics/imagenes/imgUsuario.jpg"></button>
+
+    </nav>
+    <!--Pagina de inicio-->
+    <section>
+        
+        
+    </section>
+
+    
+    
+    
+    <!--Vista Inicio de Secion-->
+    <div id="iniSesion" display="none">
+        <form id="formIniSesion">
+            <aside id="sidebarIniSesion"> 
+                <div id="conteFoto">
+                    <input type="file" id="imagenPerfil">= 
+                    <label for="imagenPerfil">Foto de Perfil</label >
+                </div>
+            </aside> 
+            <br>
+            <div id="formUsuario"></div>">
+                <label for="nomUsuario">Email o nombre del usuario</label>
+                <input type="text" name="nomUsuario" id="nomUsuario" placeholder="Email o nombre de usuario">
+                <br>
+                <label for="contraseña"></label>     
+                <input type="text" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña">
+            </div>
+            <label for="subirUsuario">Aceptar</label>
+            <input type="submit" id="subirUsuario">
+        </form>
+    </div>
+
+    <!--Cola de Reproducción-->
+    <div id="colaRep">
+        
+    </div>
+
+    <!--Géneros-->
+    <article>
+        
+    </article>
+
+    <!--Artistas y albums-->
+    <div id="principal">
+        <button id="artistasBoton" class="formatoObs">Artistas destacados</button>
+        <button id="generosBoton" class="formatoObs">Géneros</button>
+    </div>
+    <div id="artistas" style="display:none">
+    </div>
+    
+    <script src="../Dynamics/JS/baseDeDatos.js"></script>
+</body>
+</html>
